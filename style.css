@@ -17,10 +17,11 @@ body {
   padding: 20px;
   min-height: 100vh;
   text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* ============================= */
-/* HEADER / FOTO PROFILO */
+/* FOTO PROFILO */
 .profile-img {
   width: 100px;
   height: 100px;
@@ -32,6 +33,7 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+/* ============================= */
 /* NOME e DESCRIZIONE */
 h1 {
   font-size: 20px;
@@ -48,16 +50,13 @@ p {
 /* CONTENITORE LINK */
 .container {
   width: 100%;
-  max-width: 380px; /* perfetto per bio link */
+  max-width: 380px;
   margin: 0 auto;
   padding: 0 10px;
 }
 
 /* ============================= */
-/* BOTTONI */
-/* ============================= */
-/* BOTTONI PULITI */
-/* BOTTONI BASE */
+/* BOTTONI COLORATI */
 .btn {
   display: flex;
   align-items: center;
@@ -73,49 +72,54 @@ p {
   transition: all 0.3s ease;
 }
 
-/* COLORI SPECIFICI PER OGNI PAGINA */
-.btn.vinted { background-color: #43B86C; }         /* verde Vinted */
-.btn.instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
-.btn.twitter { background-color: #1DA1F2; }        /* azzurro Twitter */
-.btn.goodreads { background-color: #372213; }      /* marrone Goodreads */
-.btn.canva { background-color: #00C4CC; }          /* azzurro Canva */
-.btn.design { background-color: #FF6F61; }         /* colore esempio per Interior Design */
-.btn.patreon { background-color: #F96854; }        /* arancione Patreon */
+/* Icona dentro bottoni */
+.btn i {
+  margin-right: 10px;
+  font-size: 1.3rem;
+}
 
-/* HOVER */
+/* Colori specifici per ogni pagina */
+.btn.vinted { background-color: #43B86C; } /* verde Vinted */
+.btn.instagram { 
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+.btn.twitter { background-color: #1DA1F2; } /* azzurro Twitter */
+.btn.goodreads { background-color: #372213; } /* marrone Goodreads */
+.btn.canva { background-color: #00C4CC; } /* azzurro Canva */
+.btn.design { background-color: #FF6F61; } /* esempio Interior Design */
+.btn.patreon { background-color: #F96854; } /* arancione Patreon */
+
+/* Hover leggero */
 .btn:hover {
-  filter: brightness(1.1); /* leggero effetto più chiaro */
+  filter: brightness(1.1);
   transform: translateY(-2px);
   box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
 
-a.btn {
-  text-decoration: none;
-}
-
+/* ============================= */
 /* DARK MODE */
-/
 body.dark-mode {
-  background-color: #2C2B3A;   /* sfondo pagina scuro */
-  color: #ffffff;              /* testo generale bianco */
+  background-color: #2C2B3A; /* sfondo scuro */
+  color: #ffffff;
 }
 
 body.dark-mode .btn {
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-  color: white; /* mantiene il testo leggibile */
+  color: white; /* testo leggibile su dark */
 }
 
-/* la foto profilo NON cambia */
-.profile-img {
+/* Foto profilo rimane invariata in dark mode */
+body.dark-mode .profile-img {
   border: 3px solid #fff;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
 /* ============================= */
 /* RESPONSIVE MOBILE */
 @media (max-width: 400px) {
   .profile-img {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
   }
   h1 {
     font-size: 18px;
@@ -124,27 +128,7 @@ body.dark-mode .btn {
     font-size: 13px;
   }
   .btn {
-    font-size: 15px;
+    font-size: 16px;
     padding: 12px 16px;
   }
-}
-  top: 20px;
-  right: 20px;
-  border: none;
-  background: black;
-  color: white;
-  padding: 10px 12px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-#theme-toggle:hover {
-  transform: scale(1.1);
-}
-
-/* DARK MODE BUTTON */
-body.dark-mode #theme-toggle {
-  background: white;
-  color: black;
 }
