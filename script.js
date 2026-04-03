@@ -1,15 +1,9 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const btn = document.getElementById("theme-toggle");
-
-  if (localStorage.getItem("theme") === "dark") {
-    document.body.classList.add("dark-mode");
-    btn.textContent = "☀️";
+const toggle = document.getElementById('theme-toggle');
+toggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  if (document.body.classList.contains('dark-mode')) {
+    toggle.textContent = '☀️ Modalità Giorno';
+  } else {
+    toggle.textContent = '🌙 Modalità Notte';
   }
-
-  btn.addEventListener("click", () => {
-    const isDark = document.body.classList.toggle("dark-mode");
-
-    btn.textContent = isDark ? "☀️" : "🌙";
-    localStorage.setItem("theme", isDark ? "dark" : "light");
-  });
 });
