@@ -57,54 +57,59 @@ p {
 /* BOTTONI */
 /* ============================= */
 /* BOTTONI PULITI */
+/* BOTTONI BASE */
 .btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ffffff; 
-  color: #333;               
-  text-decoration: none;      
+  color: white;
+  text-decoration: none;
   padding: 14px 20px;
   margin-bottom: 12px;
   border-radius: 12px;
   font-weight: 500;
   font-size: 16px;
-  width: 100%;                
+  width: 100%;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  border: none;                
 }
 
+/* COLORI SPECIFICI PER OGNI PAGINA */
+.btn.vinted { background-color: #43B86C; }         /* verde Vinted */
+.btn.instagram { background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+.btn.twitter { background-color: #1DA1F2; }        /* azzurro Twitter */
+.btn.goodreads { background-color: #372213; }      /* marrone Goodreads */
+.btn.canva { background-color: #00C4CC; }          /* azzurro Canva */
+.btn.design { background-color: #FF6F61; }         /* colore esempio per Interior Design */
+.btn.patreon { background-color: #F96854; }        /* arancione Patreon */
 
-.btn i {
-  margin-right: 10px;
-  font-size: 1.3rem;
-}
-
-
+/* HOVER */
 .btn:hover {
-  background-color: #92AEC6;
-  color: white;
+  filter: brightness(1.1); /* leggero effetto più chiaro */
   transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
 
 a.btn {
   text-decoration: none;
 }
 
-/* ============================= */
 /* DARK MODE */
+/
 body.dark-mode {
-  background-color: #4D4C5C;
-  color: #ffffff;
-}
-body.dark-mode .btn {
-  background-color: #373737;
-  color: #fff;
-  border: 1px solid #555;
+  background-color: #2C2B3A;   /* sfondo pagina scuro */
+  color: #ffffff;              /* testo generale bianco */
 }
 
+body.dark-mode .btn {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  color: white; /* mantiene il testo leggibile */
+}
+
+/* la foto profilo NON cambia */
+.profile-img {
+  border: 3px solid #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 /* ============================= */
 /* RESPONSIVE MOBILE */
 @media (max-width: 400px) {
