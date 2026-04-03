@@ -31,19 +31,23 @@ body {
   margin: 0 auto 15px;
   border: 3px solid #fff;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
 }
 
 /* ============================= */
 /* NOME e DESCRIZIONE */
 h1 {
   font-size: 20px;
-  color: #2c3e50;
+  color: #2c3e50; /* colore chiaro in modalità normale */
   margin-bottom: 5px;
+  transition: color 0.3s ease;
 }
+
 p {
   font-size: 14px;
-  color: #555;
+  color: #555; /* colore normale */
   margin-bottom: 20px;
+  transition: color 0.3s ease;
 }
 
 /* ============================= */
@@ -79,15 +83,15 @@ p {
 }
 
 /* Colori specifici per ogni pagina */
-.btn.vinted { background-color: #43B86C; } /* verde Vinted */
+.btn.vinted { background-color: #43B86C; }         /* verde Vinted */
 .btn.instagram { 
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
 }
-.btn.twitter { background-color: #1DA1F2; } /* azzurro Twitter */
-.btn.goodreads { background-color: #372213; } /* marrone Goodreads */
-.btn.canva { background-color: #00C4CC; } /* azzurro Canva */
-.btn.design { background-color: #FF6F61; } /* esempio Interior Design */
-.btn.patreon { background-color: #F96854; } /* arancione Patreon */
+.btn.twitter { background-color: #1DA1F2; }       /* azzurro Twitter */
+.btn.goodreads { background-color: #372213; }     /* marrone Goodreads */
+.btn.canva { background-color: #00C4CC; }         /* azzurro Canva */
+.btn.design { background-color: #FF6F61; }        /* esempio Interior Design */
+.btn.patreon { background-color: #F96854; }       /* arancione Patreon */
 
 /* Hover leggero */
 .btn:hover {
@@ -108,7 +112,11 @@ body.dark-mode .btn {
   color: white; /* testo leggibile su dark */
 }
 
-/* Foto profilo rimane invariata in dark mode */
+/* Nome e descrizione leggibili in dark mode */
+body.dark-mode h1 { color: #FFD700; }   /* giallo oro */
+body.dark-mode p { color: #CCCCCC; }    /* grigio chiaro */
+
+/* Foto profilo rimane invariata */
 body.dark-mode .profile-img {
   border: 3px solid #fff;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
