@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #d9dee5, #f5f7fa);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  transition: all 0.3s ease;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+}
+
+.profile-img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+h1 {
+  margin: 15px 0 5px;
+  font-size: 22px;
+  color: #2c3e50;
+}
+
+p {
+  color: #555;
+  font-size: 14px;
+}
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  max-width: 420px;
+  margin-top: 30px;
+}
+
+/* BOTTONI BASE */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px;
+  margin-bottom: 15px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ICONE */
+.btn i {
+  font-size: 1.3rem;
+}
+
+/* HOVER */
+.btn:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* COLORI SOCIAL */
+
+.instagram {
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+}
+
+.discord {
+  background: #5865F2;
+}
+
+.twitter {
+  background: #000000;
+}
+
+.goodreads {
+  background: #8b5a2b;
+}
+
+.vinted {
+  background: #00c4b4;
+}
+
+.canva {
+  background: linear-gradient(45deg, #00c4cc, #7b2ff7);
+}
+
+.design {
+  background: #2c3e50;
+}
+
+.patreon {
+  background: #ff424d;
+}
+
+/* DARK MODE */
+body.dark-mode {
+  background: #1e1e2f;
+}
+
+body.dark-mode h1 {
+  color: #ffffff;
+}
+
+body.dark-mode p {
+  color: #cccccc;
+}
+
+body.dark-mode .btn {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+/* TOGGLE BUTTON */
+#theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background: black;
+  color: white;
+  padding: 10px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* DARK MODE BUTTON */
+body.dark-mode #theme-toggle {
+  background: white;
+  color: black;
+}
