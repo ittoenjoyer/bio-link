@@ -1,5 +1,4 @@
-/* ============================= */
-/* RESET BASE */
+
 * {
   margin: 0;
   padding: 0;
@@ -20,7 +19,6 @@ body, html {
   box-shadow: none;
 }
 
-/* ============================= */
 /* FOTO PROFILO */
 .profile-img {
   width: 25vw;
@@ -34,7 +32,6 @@ body, html {
   transition: all 0.3s ease;
 }
 
-/* ============================= */
 /* NOME E DESCRIZIONE */
 h1 {
   font-size: 20px;
@@ -50,7 +47,6 @@ p {
   transition: color 0.3s ease;
 }
 
-/* ============================= */
 /* CONTENITORE */
 .container {
   width: 95%;
@@ -59,7 +55,6 @@ p {
   padding: 0;
 }
 
-/* ============================= */
 /* BOTTONI COLORATI */
 .btn {
   display: flex;
@@ -98,7 +93,6 @@ p {
   box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
 
-/* ============================= */
 /* ANIMAZIONI SEQUENZIALI */
 .animate__delay-1s { animation-delay: 0.2s; }
 .animate__delay-2s { animation-delay: 0.4s; }
@@ -107,7 +101,7 @@ p {
 .animate__delay-5s { animation-delay: 1s; }
 .animate__delay-6s { animation-delay: 1.2s; }
 
-/* ============================= */
+
 /* DARK MODE */
 body.dark-mode {
   background-color: #2C2B3A;
@@ -128,7 +122,6 @@ body.dark-mode .profile-img {
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* ============================= */
 /* RESPONSIVE */
 @media (max-width: 400px) {
   .profile-img { width: 30vw; max-width: 100px; }
